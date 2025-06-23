@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      background: #333;
+      color: white;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .box {
+      background: #f4f4f4;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 5px;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>Logo</div>
+    <nav>Home | About | Contact</nav>
+  </header>
+  <div class="container">
+    <div class="box">Content 1</div>
+    <div class="box">Content 2</div>
+    <div class="box">Content 3</div>
+  </div>
+</body>
+</html>
